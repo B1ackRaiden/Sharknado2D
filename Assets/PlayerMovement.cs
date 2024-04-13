@@ -21,5 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveDirection = new Vector3(x, y, 0);
         transform.Translate(moveDirection * Time.fixedDeltaTime * speed);
+
+        //check what way the player is facing
     }
 }
