@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public Vector3 moveDirection;
     public float speed = 2.5f;
-    public int playerFacing;
 
     // Start is called before the first frame update
     void Start()
@@ -17,38 +16,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        float x = Input.GetAxisRaw("Horizontal"); //These are instance variables, meaning they will
         float y = Input.GetAxisRaw("Vertical");
 
         moveDirection = new Vector3(x, y, 0);
         transform.Translate(moveDirection * Time.fixedDeltaTime * speed);
 
-        //check what way the player is moving
-        if (x == 1)
-        {
-            playerFacing = 1;
-            GetComponent<Animator>().Play("RightWalk");
-        }
-        else if (x == -1)
-        {
-            playerFacing = -1;
-            GetComponent<Animator>().Play("LeftWalk");
-        }
-
-        if (y == 1)
-        {
-            playerFacing = 1;
-            GetComponent<Animator>().Play("BackWalk");
-        }
-        else if (y == -1)
-        {
-            playerFacing = -1;
-            GetComponent<Animator>().Play("FrontWalk");
-        }
-        else if(x == 0)
-        {
-            playerFacing = 0;
-            GetComponent<Animator>().Play("IdleStand");
-        }
+        //check what way the player is facing
     }
 }
