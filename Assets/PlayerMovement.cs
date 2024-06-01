@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
             playerFacing = -1;
             GetComponent<Animator>().Play("FrontWalk");
         }
+
         else if(x == 0)
         {
             playerFacing = 0;
