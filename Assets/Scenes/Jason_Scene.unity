@@ -232,11 +232,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1268227401}
   - component: {fileID: 1268227400}
-  - component: {fileID: 1268227399}
   - component: {fileID: 1268227398}
   - component: {fileID: 1268227402}
+  - component: {fileID: 1268227399}
+  - component: {fileID: 1268227403}
   m_Layer: 0
-  m_Name: EserPlayer
+  m_Name: Eser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,9 +276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d894dd809a2fe9a4aa6e63ab603dac72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0, z: 0}
   speed: 2.5
   playerFacing: 0
+  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!212 &1268227400
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -343,7 +344,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1268227402
+--- !u!114 &1268227402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268227397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20dc2b17def1f0549938c3e708c6b2a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1268227401}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: 0}
+--- !u!95 &1268227403
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
