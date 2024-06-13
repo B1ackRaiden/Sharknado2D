@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UICollideScript : MonoBehaviour
+public class OrderUpCollider : MonoBehaviour
 {
-    private GameObject Minigame;
+    private GameObject OrderUp;
 
     // Start is called before the first frame update
     void Awake()
     {
-        Minigame = GameObject.Find("Panel");
+        OrderUp = GameObject.Find("OrderCounter");
     }
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            Minigame.SetActive(true);
+            OrderUp.SetActive(true);
         }
     }
 
@@ -25,7 +25,7 @@ public class UICollideScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Minigame.SetActive(false);
+            OrderUp.SetActive(false);
         }
     }
 }
